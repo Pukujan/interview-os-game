@@ -34,46 +34,46 @@
       "module_id": "projectization.build-vs-reuse",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "The project requires a cross-platform client, learner-evidence integration, a mission engine, and later evaluation infrastructure with plausible reusable frameworks and existing internal systems.",
+      "rationale": "The project has plausible reusable application, learner-evidence, and methodology components.",
       "requirements": [
-        {"requirement_id": "REUSE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Defines capability, constraints, non-goals, and comparison criteria."}], "rationale": null},
-        {"requirement_id": "REUSE_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Records Study OS, PAM, Expo/React Native, Flutter, native, PWA, and generic quiz-engine candidates."}], "rationale": null},
-        {"requirement_id": "REUSE_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Records material trade-offs and dispositions for serious candidates."}], "rationale": null},
+        {"requirement_id": "REUSE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Capability, constraints, non-goals, and comparison criteria."}], "rationale": null},
+        {"requirement_id": "REUSE_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Candidate register covers Study OS, PAM, Expo/React Native, Flutter, native, PWA, and quiz engines."}], "rationale": null},
+        {"requirement_id": "REUSE_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Material trade-offs and candidate dispositions are recorded."}], "rationale": null},
         {"requirement_id": "REUSE_004", "state": "pending", "evidence": [], "rationale": null},
         {"requirement_id": "REUSE_005", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "REUSE_006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Explains why the narrow mission engine is bespoke and why generic quiz abstractions do not meet the scoped requirements."}], "rationale": null}
+        {"requirement_id": "REUSE_006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "The narrow mission engine has concrete requirements not met by generic quiz abstractions."}], "rationale": null}
       ]
     },
     {
       "module_id": "projectization.scope-boundary",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "The project has substantial horizontal scope risk across quiz content, simulation, datasets, DSA execution, system design, AI evaluation, mobile UI, and Study OS integration.",
+      "rationale": "The idea has high horizontal scope risk across content, simulation, datasets, mobile UI, and evaluation.",
       "requirements": [
-        {"requirement_id": "SCOPE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "States V0 outcome and bounded capabilities/claims."}], "rationale": null},
-        {"requirement_id": "SCOPE_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "States explicit V0 non-goals."}], "rationale": null},
-        {"requirement_id": "SCOPE_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Records deferred/rejected mechanisms and admission triggers."}], "rationale": null},
-        {"requirement_id": "SCOPE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Defines the V0 scope-admission rule."}], "rationale": null},
-        {"requirement_id": "SCOPE_005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Defines repository ownership and must-not-own boundaries."}], "rationale": null}
+        {"requirement_id": "SCOPE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "V0 outcome and claims are bounded."}], "rationale": null},
+        {"requirement_id": "SCOPE_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "V0 non-goals are explicit."}], "rationale": null},
+        {"requirement_id": "SCOPE_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Deferred/rejected mechanisms and triggers are recorded."}], "rationale": null},
+        {"requirement_id": "SCOPE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Scope-admission rule is defined."}], "rationale": null},
+        {"requirement_id": "SCOPE_005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Repository ownership and must-not-own boundaries are defined."}], "rationale": null}
       ]
     },
     {
       "module_id": "planning.foundation",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "The project is nontrivial and needs a durable product outcome, system boundary, invariants, and failure register before implementation expands.",
+      "rationale": "Nontrivial implementation needs product, architecture, invariants, and failures made durable first.",
       "requirements": [
-        {"requirement_id": "PLAN_FOUNDATION_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/PDD.md", "note": "Defines user, problem, thesis, workflow, success criteria, kill criteria, and current product boundary."}], "rationale": null},
-        {"requirement_id": "PLAN_FOUNDATION_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SDD.md", "note": "Defines client, evaluation API, mission model, dataset adapter, LLM boundary, Study OS integration, state authority, and deferred components."}], "rationale": null},
-        {"requirement_id": "PLAN_FOUNDATION_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/INVARIANTS.md", "note": "Defines material learning, evaluation, ownership, and product invariants with validation approaches."}], "rationale": null},
-        {"requirement_id": "PLAN_FOUNDATION_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/FAILURE_REGISTER.md", "note": "Defines material failure modes, impact, detection, mitigation/containment, and residual risk."}], "rationale": null}
+        {"requirement_id": "PLAN_FOUNDATION_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/PDD.md", "note": "Product outcome, user, success criteria, and kill criteria."}], "rationale": null},
+        {"requirement_id": "PLAN_FOUNDATION_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SDD.md", "note": "System, interface, state, dependency, and ownership boundaries."}], "rationale": null},
+        {"requirement_id": "PLAN_FOUNDATION_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/INVARIANTS.md", "note": "Material invariants and validation approaches."}], "rationale": null},
+        {"requirement_id": "PLAN_FOUNDATION_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/FAILURE_REGISTER.md", "note": "Failure modes include impact, detection, mitigation, and residual risk."}], "rationale": null}
       ]
     },
     {
       "module_id": "engineering.swe-ci-foundation",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "Interview OS will contain maintained application/backend software and therefore needs a reproducible local validation lane and CI before implementation grows.",
+      "rationale": "Interview OS will contain maintained application/backend software.",
       "requirements": [
         {"requirement_id": "SWE_CI_001", "state": "pending", "evidence": [], "rationale": null},
         {"requirement_id": "SWE_CI_002", "state": "pending", "evidence": [], "rationale": null},
@@ -86,11 +86,11 @@
       "module_id": "benchmark.integrity",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "V0 intentionally uses dataset-backed missions, derived LLM evaluation, transfer items, and a hidden/confirmatory boundary for some evidence.",
+      "rationale": "V0 uses dataset-backed missions, LLM-derived evaluation, transfer items, and some hidden evaluation.",
       "requirements": [
-        {"requirement_id": "BENCH_INT_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Defines narrow claim boundaries and prohibits undefined universal scores."}], "rationale": null},
+        {"requirement_id": "BENCH_INT_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Evaluation claims and applicability limits are narrow."}], "rationale": null},
         {"requirement_id": "BENCH_INT_002", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "BENCH_INT_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Defines teaching/practice/transfer/confirmatory visibility boundaries."}], "rationale": null},
+        {"requirement_id": "BENCH_INT_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Teaching, practice, transfer, and confirmatory boundaries are defined."}], "rationale": null},
         {"requirement_id": "BENCH_INT_004", "state": "pending", "evidence": [], "rationale": null},
         {"requirement_id": "BENCH_INT_005", "state": "pending", "evidence": [], "rationale": null}
       ]
@@ -99,27 +99,27 @@
       "module_id": "provenance.decision-lineage",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "Project scope, reuse, learning-authority, evaluator, dataset, and architecture decisions are consequential and should remain replayable across sessions.",
+      "rationale": "Scope, reuse, evaluator, dataset, and ownership decisions are replay-worthy across sessions.",
       "requirements": [
-        {"requirement_id": "PROV_LINEAGE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/DECISIONS.md", "note": "Admits consequential project decisions while leaving routine issue/task churn in GitHub."}], "rationale": null},
+        {"requirement_id": "PROV_LINEAGE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/DECISIONS.md", "note": "Consequential decision classes are admitted while routine task churn remains in GitHub."}], "rationale": null},
         {"requirement_id": "PROV_LINEAGE_002", "state": "pending", "evidence": [], "rationale": null},
         {"requirement_id": "PROV_LINEAGE_003", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "PROV_LINEAGE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines live GitHub state as authoritative and separates project/runtime ownership from methodology/lineage artifacts."}], "rationale": null},
-        {"requirement_id": "PROV_LINEAGE_005", "state": "not_applicable", "evidence": [], "rationale": "No external provenance runtime ingest or promotion is claimed for Interview OS V0."}
+        {"requirement_id": "PROV_LINEAGE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Live GitHub state is authoritative and runtime ownership is separate from methodology/lineage."}], "rationale": null},
+        {"requirement_id": "PROV_LINEAGE_005", "state": "not_applicable", "evidence": [], "rationale": "No external provenance runtime ingest or promotion is claimed for V0."}
       ]
     },
     {
       "module_id": "continuity.structured-handoff",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "The project is explicitly multi-session and agent-assisted, and exact issue/branch/methodology/validation continuity matters.",
+      "rationale": "The project is multi-session and agent-assisted and needs exact resumable state.",
       "requirements": [
-        {"requirement_id": "HANDOFF-001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines material handoff triggers and live-state reconciliation authority."}], "rationale": null},
-        {"requirement_id": "HANDOFF-002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Versioned current handoff state using pam-handoff/0.2.0."}, {"kind": "ci_run", "locator": "github-actions:33697121873", "note": "Pinned PAM validator successfully validated Interview OS HANDOFF_STATE.json."}], "rationale": null},
-        {"requirement_id": "HANDOFF-003", "state": "satisfied", "evidence": [{"kind": "ci_run", "locator": "github-actions:33697121873", "note": "Pinned PAM handoff positive/negative tests and Interview OS handoff validation passed in the normal assurance workflow."}, {"kind": "file", "locator": ".github/workflows/assurance.yml", "note": "Normal repository assurance lane runs PAM handoff contract tests and validates current state."}], "rationale": null},
-        {"requirement_id": "HANDOFF-004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Requires reconciling referenced live GitHub/CI state before mutation after material handoff."}], "rationale": null},
-        {"requirement_id": "HANDOFF-005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines HANDOFF_STATE.json as replaceable current state and append-only historical checkpoint policy when history is retained."}, {"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Current machine-readable resumable state packet."}], "rationale": null},
-        {"requirement_id": "HANDOFF-006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Forbids hidden/confirmatory material in agent-visible handoff state."}, {"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Defines the hidden-evaluation boundary."}], "rationale": null}
+        {"requirement_id": "HANDOFF-001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Material handoff triggers and live-state precedence are defined."}], "rationale": null},
+        {"requirement_id": "HANDOFF-002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Versioned current handoff packet using pam-handoff/0.2.0; its validation is covered by HANDOFF-003."}], "rationale": null},
+        {"requirement_id": "HANDOFF-003", "state": "satisfied", "evidence": [{"kind": "ci_run", "locator": "github-actions:33697121873", "note": "Pinned PAM handoff positive/negative tests plus Interview OS handoff validation passed."}, {"kind": "file", "locator": ".github/workflows/assurance.yml", "note": "Normal assurance lane runs the pinned handoff tests and validators."}], "rationale": null},
+        {"requirement_id": "HANDOFF-004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Resume instructions require live GitHub/CI reconciliation before mutation."}], "rationale": null},
+        {"requirement_id": "HANDOFF-005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Current-state and optional append-only historical-checkpoint policy is defined."}, {"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Current resumable state packet."}], "rationale": null},
+        {"requirement_id": "HANDOFF-006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Hidden/confirmatory material is forbidden in agent-visible handoffs."}, {"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Hidden-evaluation boundary is defined."}], "rationale": null}
       ]
     }
   ]
