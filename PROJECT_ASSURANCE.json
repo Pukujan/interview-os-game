@@ -115,10 +115,10 @@
       "rationale": "The project is explicitly multi-session and agent-assisted, and exact issue/branch/methodology/validation continuity matters.",
       "requirements": [
         {"requirement_id": "HANDOFF-001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines material handoff triggers and live-state reconciliation authority."}], "rationale": null},
-        {"requirement_id": "HANDOFF-002", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "HANDOFF-003", "state": "pending", "evidence": [], "rationale": null},
+        {"requirement_id": "HANDOFF-002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Versioned current handoff state using pam-handoff/0.2.0."}, {"kind": "ci_run", "locator": "github-actions:33697121873", "note": "Pinned PAM validator successfully validated Interview OS HANDOFF_STATE.json."}], "rationale": null},
+        {"requirement_id": "HANDOFF-003", "state": "satisfied", "evidence": [{"kind": "ci_run", "locator": "github-actions:33697121873", "note": "Pinned PAM handoff positive/negative tests and Interview OS handoff validation passed in the normal assurance workflow."}, {"kind": "file", "locator": ".github/workflows/assurance.yml", "note": "Normal repository assurance lane runs PAM handoff contract tests and validates current state."}], "rationale": null},
         {"requirement_id": "HANDOFF-004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Requires reconciling referenced live GitHub/CI state before mutation after material handoff."}], "rationale": null},
-        {"requirement_id": "HANDOFF-005", "state": "pending", "evidence": [], "rationale": null},
+        {"requirement_id": "HANDOFF-005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines HANDOFF_STATE.json as replaceable current state and append-only historical checkpoint policy when history is retained."}, {"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Current machine-readable resumable state packet."}], "rationale": null},
         {"requirement_id": "HANDOFF-006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Forbids hidden/confirmatory material in agent-visible handoff state."}, {"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Defines the hidden-evaluation boundary."}], "rationale": null}
       ]
     }
