@@ -1,0 +1,38 @@
+name: assurance
+
+on:
+  push:
+    branches: [main, pam-preflight]
+  pull_request:
+
+jobs:
+  pam-preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Interview OS
+        uses: actions/checkout@v4
+
+      - name: Checkout pinned Project Assurance Modules
+        uses: actions/checkout@v4
+        with:
+          repository: Pukujan/project-assurance-modules
+          ref: 0e62c3e7cbb90e9242103238829bbf0cc2f94917
+          path: pam
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PAM validator dependencies
+        run: python -m pip install -e ./pam
+
+      - name: Validate Project Assurance manifest
+        env:
+          PYTHONPATH: pam
+        run: python -m scripts.pam_validate PROJECT_ASSURANCE.json
+
+      - name: Validate structured handoff
+        env:
+          PYTHONPATH: pam
+        run: python -m scripts.pam_handoff HANDOFF_STATE.json
