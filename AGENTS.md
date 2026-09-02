@@ -9,6 +9,7 @@ Live GitHub repository/issue/PR/CI state wins over stale handoff text. Reconcile
 Before implementation expands, read:
 
 - `PROJECT_ASSURANCE.json`;
+- `HANDOFF_STATE.json`;
 - `docs/PDD.md`;
 - `docs/SCOPE_BOUNDARY.md`;
 - `docs/BUILD_VS_REUSE.md`;
@@ -22,7 +23,9 @@ Do not start deferred mechanisms merely because they appear attractive or feasib
 
 ## Handoff triggers
 
-Update the structured handoff for material:
+`HANDOFF_STATE.json` is the replaceable current resumable state packet.
+
+Update it for material:
 
 - session/agent responsibility transfer;
 - active issue or PR transition;
@@ -31,6 +34,8 @@ Update the structured handoff for material:
 - material plan/scope change.
 
 Do not update it for every trivial edit.
+
+Historical checkpoints are optional. When a milestone needs a durable historical checkpoint, copy the validated state into an append-only `docs/handoffs/` record rather than presenting an old checkpoint as current state.
 
 ## Hidden-evaluation boundary
 
