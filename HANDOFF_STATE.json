@@ -1,0 +1,111 @@
+{
+  "schema_version": "pam-handoff/0.2.0",
+  "state_kind": "current",
+  "project": {
+    "name": "Interview OS Game",
+    "repository": "Pukujan/interview-os-game",
+    "phase": "projectization-preflight-review",
+    "observed_identity": {
+      "kind": "git_commit",
+      "value": "f4bf569f248adb9d9814f95199c346a64a8fbcb2"
+    },
+    "active_issue": 1
+  },
+  "work": {
+    "owning_repository": "Pukujan/interview-os-game",
+    "issue": 1,
+    "branch": "pam-preflight",
+    "pr": 7,
+    "state": "in_review"
+  },
+  "methodology": {
+    "repository": "Pukujan/project-assurance-modules",
+    "revision": "0e62c3e7cbb90e9242103238829bbf0cc2f94917",
+    "modules": [
+      {"module_id": "projectization.build-vs-reuse", "version": "0.1.0"},
+      {"module_id": "projectization.scope-boundary", "version": "0.1.0"},
+      {"module_id": "planning.foundation", "version": "0.1.0"},
+      {"module_id": "engineering.swe-ci-foundation", "version": "0.1.0"},
+      {"module_id": "benchmark.integrity", "version": "0.1.0"},
+      {"module_id": "provenance.decision-lineage", "version": "0.1.0"},
+      {"module_id": "continuity.structured-handoff", "version": "0.1.0"}
+    ]
+  },
+  "components": [
+    {
+      "name": "Study OS",
+      "role": "Preferred longitudinal learner-evidence and capability-state authority; Interview OS should integrate through an adapter rather than duplicate it.",
+      "locator": "Pukujan/Study-os",
+      "observed_identity": {
+        "kind": "git_commit",
+        "value": "6e93b66d7aaffa6494dd944fc6bf67df31c412bf"
+      },
+      "tested_identity": null,
+      "issue": null,
+      "pr": null
+    }
+  ],
+  "validation": {
+    "passed": [],
+    "failed": [],
+    "not_run": [
+      "PAM manifest semantic validator against pinned methodology revision",
+      "PAM structured-handoff schema validator",
+      "Expo/React Native representative visual interaction spike",
+      "Interview OS local quality lane and CI"
+    ]
+  },
+  "next_action": {
+    "repository": "Pukujan/interview-os-game",
+    "issue": 1,
+    "action": "Review PR #7, run the pinned PAM validators in a GitHub-capable/local environment, then close or explicitly retain the remaining preflight gaps before broad implementation.",
+    "acceptance": "Project definition/scope/reuse decisions are accepted, PROJECT_ASSURANCE.json and HANDOFF_STATE.json validate against PAM, and remaining implementation-phase requirements are explicitly pending rather than falsely satisfied."
+  },
+  "blockers": [],
+  "scope": {
+    "do_not_start": [
+      "general-purpose RAG/run-bench platform",
+      "broad DSA/ML/general-system-design curriculum",
+      "arbitrary code execution sandbox",
+      "distributed-systems simulation engine",
+      "public accounts/social/multiplayer infrastructure",
+      "separate SwiftUI and Android-native applications"
+    ]
+  },
+  "decisions_not_to_reverse": [
+    "V0 is a small Applied AI/RAG vertical slice before broad curriculum expansion.",
+    "Game progression is not learner mastery evidence.",
+    "LLM reasoning evaluation does not override deterministic or dataset evidence.",
+    "Study OS remains the preferred longitudinal learner-evidence/capability authority.",
+    "PAM remains projectization methodology rather than a gameplay runtime dependency.",
+    "The general run bench is deferred until the small learning loop demonstrates value."
+  ],
+  "open_questions": [
+    "Which exact RAG dataset/fixture and immutable revision should power the first dataset-backed mission?",
+    "Which backend/serverless implementation should own LLM calls and hidden evaluation after mission contracts are defined?",
+    "What exact Study OS application contract should receive Interview OS attempt/evidence payloads?",
+    "Does the Expo visual interaction spike meet the desired Design Bakery-style game feel on both iOS- and Android-sized targets?"
+  ],
+  "reconciliation": {
+    "live_state_wins": true,
+    "checks": [
+      "Fetch current main and pam-preflight branch SHAs.",
+      "Fetch issue #1 and PR #7 state before changing projectization status.",
+      "Confirm the pinned PAM revision still matches PROJECT_ASSURANCE.json.",
+      "Confirm Study OS integration assumptions against the current Study OS revision before implementing the adapter."
+    ],
+    "stale_state_behavior": "refresh_and_revalidate"
+  },
+  "hidden_evaluation": {
+    "agent_visible_hidden_material": false,
+    "policy": "Agent-visible handoffs may reference hidden-evaluation policy and item classes but must never contain hidden answers, labels, seeds, private evaluator material, or protected transfer items."
+  },
+  "handoff": {
+    "created_from_identity": {
+      "kind": "git_commit",
+      "value": "f4bf569f248adb9d9814f95199c346a64a8fbcb2"
+    },
+    "created_at": "2026-09-02T23:53:00Z",
+    "reason": "pr_transition"
+  }
+}
