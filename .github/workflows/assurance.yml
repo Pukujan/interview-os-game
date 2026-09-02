@@ -24,15 +24,20 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install PAM validator dependencies
-        run: python -m pip install -e ./pam
+      - name: Install pinned PAM validation environment
+        run: python -m pip install -e './pam[dev]'
+
+      - name: Run PAM structured-handoff positive and negative tests
+        env:
+          PYTHONPATH: pam
+        run: python -m pytest pam/tests/test_pam_handoff.py
 
       - name: Validate Project Assurance manifest
         env:
           PYTHONPATH: pam
         run: python -m scripts.pam_validate PROJECT_ASSURANCE.json
 
-      - name: Validate structured handoff
+      - name: Validate Interview OS structured handoff
         env:
           PYTHONPATH: pam
         run: python -m scripts.pam_handoff HANDOFF_STATE.json
