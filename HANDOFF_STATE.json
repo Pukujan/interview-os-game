@@ -7,7 +7,7 @@
     "phase": "projectization-restart-discovery",
     "observed_identity": {
       "kind": "git_commit",
-      "value": "b6f3d6d24b7335bf44104ab03c4f5ae2361873bd"
+      "value": "2a9185fb35e86bf4ebf1f9b8c711a22a39459061"
     },
     "active_issue": 8
   },
@@ -52,12 +52,28 @@
     }
   ],
   "validation": {
-    "passed": [],
-    "failed": [],
+    "passed": [
+      {
+        "name": "PAM v0.2 reuse assessment semantic validation",
+        "evidence": "GitHub Actions run 33718363203 validated assurance/REUSE_ASSESSMENT.json before the handoff-only schema failure."
+      },
+      {
+        "name": "PAM v0.2 Project Assurance manifest validation",
+        "evidence": "GitHub Actions run 33718363203 validated PROJECT_ASSURANCE.json before the handoff-only schema failure."
+      },
+      {
+        "name": "PAM v0.2 build-vs-reuse adversarial tests",
+        "evidence": "GitHub Actions run 33718363203 passed all 19 pam/tests/test_pam_reuse.py tests."
+      }
+    ],
+    "failed": [
+      {
+        "name": "Replacement structured handoff validation",
+        "evidence": "GitHub Actions run 33718363203 rejected handoff.reason=plan_change; PAM requires material_plan_change. This file corrects that contract value and requires a fresh run."
+      }
+    ],
     "not_run": [
-      "PAM v0.2 reuse-assessment semantic validation on the new adopting-project artifact",
-      "PAM v0.2 manifest validation on the restarted requirement state",
-      "PAM structured-handoff validation on this replacement current state",
+      "Fresh PAM structured-handoff validation after correcting the transition reason",
       "Representative Interview OS Expo visual/interaction spike",
       "Application lint/type/test lane because product implementation is not yet authorized"
     ]
@@ -65,8 +81,8 @@
   "next_action": {
     "repository": "Pukujan/interview-os-game",
     "issue": 8,
-    "action": "Run the pinned PAM v0.2 assurance lane against the fresh research handoff, REUSE_ASSESSMENT.json, restarted PROJECT_ASSURANCE.json, and replacement HANDOFF_STATE.json; repair any deterministic failures before asking the project owner to review REUSE_008.",
-    "acceptance": "The draft reuse assessment and restarted manifest validate under PAM revision 03fc55ae4036a9704cdb929fb3ae6dc520ae2183, old v0.1 planning remains non-authoritative, and REUSE_008 remains pending until explicit project-owner review."
+    "action": "Run the pinned PAM v0.2 assurance lane after the handoff correction; if green, open a reprojectization review PR containing the fresh research, reuse assessment, and scope boundary while keeping REUSE_008 pending for project-owner review.",
+    "acceptance": "The reuse assessment, restarted manifest, and replacement handoff validate under PAM revision 03fc55ae4036a9704cdb929fb3ae6dc520ae2183; old v0.1 planning remains non-authoritative; no product implementation starts before explicit review."
   },
   "blockers": [],
   "scope": {
@@ -112,9 +128,9 @@
   "handoff": {
     "created_from_identity": {
       "kind": "git_commit",
-      "value": "b6f3d6d24b7335bf44104ab03c4f5ae2361873bd"
+      "value": "2a9185fb35e86bf4ebf1f9b8c711a22a39459061"
     },
-    "created_at": "2026-09-03T05:10:00Z",
-    "reason": "plan_change"
+    "created_at": "2026-09-03T05:21:00Z",
+    "reason": "material_plan_change"
   }
 }
