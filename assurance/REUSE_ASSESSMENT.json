@@ -1,0 +1,696 @@
+{
+  "schema_version": "pam-reuse-assessment/0.1.0",
+  "assessment_status": "draft",
+  "project": {
+    "repository": "Pukujan/interview-os-game"
+  },
+  "capability": {
+    "id": "mobile-interview-learning-runtime",
+    "description": "Provide a personal mobile-first technical interview learning game, initially focused on mid-level Applied AI/RAG, with compact missions, typed reasoning, progressive assistance, tappable jargon help, fun visual progression, strict mixed deterministic/LLM evaluation, dataset-backed tasks where useful, and longitudinal learner-evidence integration; later tracks may include DSA, ML fundamentals, and system design.",
+    "constraints": [
+      "One application codebase should support iOS and Android.",
+      "The core loop must support typed reasoning and progressive assistance rather than only multiple-choice quizzes.",
+      "Terminology tooltips must teach vocabulary without leaking the answer.",
+      "LLM interpretation must not override deterministic answer keys, executable results, or dataset metrics.",
+      "Protected transfer or confirmatory answer material must not be shipped in the normal client bundle.",
+      "Longitudinal mastery, transfer, retention, and assistance provenance should reuse Study OS when its contracts fit rather than create a competing learner-state authority.",
+      "The personal non-commercial V0 must stay small enough to validate daily-use value before a general run bench or broad curriculum is built.",
+      "External datasets, benchmarks, question banks, and transformed content must retain source and visibility provenance."
+    ],
+    "non_goals": [
+      "Build a general-purpose learning management system.",
+      "Build a universal coding judge or distributed-systems simulator in the first vertical slice.",
+      "Duplicate Study OS learner-state and mastery semantics inside the game.",
+      "Create a broad DSA, ML, system-design, and Applied-AI curriculum before the first learning loop is validated.",
+      "Invent new datasets, benchmarks, or question banks from scratch when suitable reusable assets can be adapted."
+    ]
+  },
+  "search_plan": {
+    "required_scopes": ["internal", "external"],
+    "required_asset_classes": ["dataset", "benchmark", "question_bank", "content_asset"]
+  },
+  "searches": [
+    {
+      "search_id": "internal-owner-repository-inventory",
+      "scope": "internal",
+      "surface": "Authenticated owner repository inventory and targeted repository inspection",
+      "query": "Owner repositories relevant to learning evidence, AI evaluation, mobile React Native/Expo implementation, and Design Bakery visual language",
+      "target_classes": ["internal_system", "application", "content_asset"],
+      "outcome": "candidates_found",
+      "receipts": [
+        {
+          "receipt_id": "internal-study-os",
+          "kind": "repository",
+          "locator": "Pukujan/Study-os",
+          "note": "Current public Study OS repository; README documents learning episodes, observed/self-reported/derived evidence separation, assistance/transfer/retention responsibilities, and project boundaries."
+        },
+        {
+          "receipt_id": "internal-eval-lab",
+          "kind": "repository",
+          "locator": "Pukujan/Eval-lab",
+          "note": "Existing local-first AI evaluation walking skeleton with deterministic gates, hidden tests, evidence artifacts, Inspect AI, Promptfoo, and explicit non-LLM verdict paths."
+        },
+        {
+          "receipt_id": "internal-design-bakery",
+          "kind": "repository",
+          "locator": "Pukujan/design-bakery",
+          "note": "Existing visual/product codebase containing the ONI engineering-system visual language, including Build/Break/Debug/Log/Blueprint interaction motifs and reusable design references."
+        },
+        {
+          "receipt_id": "internal-gemini-rn",
+          "kind": "repository",
+          "locator": "Pukujan/gemini-medical-frontend-react-native",
+          "note": "Prior owner React Native application using Expo Router, Expo Haptics, Reanimated, TypeScript, Android/iOS scripts, and React Native 0.81.5; useful as an internal cross-platform implementation receipt."
+        }
+      ],
+      "rationale": null
+    },
+    {
+      "search_id": "external-interactive-learning-interview-platforms",
+      "scope": "external",
+      "surface": "GitHub repository and project-documentation discovery",
+      "query": "interactive learning branching scenario technical interview trainer AI interviewer system design practice",
+      "target_classes": ["application", "framework"],
+      "outcome": "candidates_found",
+      "receipts": [
+        {
+          "receipt_id": "external-h5p",
+          "kind": "repository",
+          "locator": "h5p/h5p-branching-scenario",
+          "note": "Concrete H5P branching-scenario content runtime considered for authored branching interactions and feedback."
+        },
+        {
+          "receipt_id": "external-oppia",
+          "kind": "repository",
+          "locator": "oppia/oppia",
+          "note": "Concrete interactive-learning platform whose explorations model learner interactions, rules, feedback, and state transitions."
+        },
+        {
+          "receipt_id": "external-grillkit",
+          "kind": "repository",
+          "locator": "GrillKit/grillkit",
+          "note": "Concrete self-hosted technical interview trainer with curated question banks, theory Q&A, scoring, follow-ups, coding tasks, public/hidden tests, and optional voice."
+        },
+        {
+          "receipt_id": "external-loadout",
+          "kind": "repository",
+          "locator": "VC444/loadout",
+          "note": "Concrete system-design interview practice app with staged interview flow, AI voice interviewer, real-time architecture diagramming, and timed sessions."
+        }
+      ],
+      "rationale": null
+    },
+    {
+      "search_id": "external-mobile-frameworks",
+      "scope": "external",
+      "surface": "Official framework repositories and current platform documentation",
+      "query": "cross-platform single-codebase iOS Android framework Expo React Native Flutter",
+      "target_classes": ["framework"],
+      "outcome": "candidates_found",
+      "receipts": [
+        {
+          "receipt_id": "external-expo",
+          "kind": "repository",
+          "locator": "expo/expo",
+          "note": "Official Expo repository; current Expo documentation describes a React Native framework for Android/iOS and universal applications from one TypeScript/JavaScript codebase."
+        },
+        {
+          "receipt_id": "external-flutter",
+          "kind": "repository",
+          "locator": "flutter/flutter",
+          "note": "Official Flutter repository; current Flutter documentation describes natively compiled multi-platform applications from one Dart codebase."
+        }
+      ],
+      "rationale": null
+    },
+    {
+      "search_id": "external-llm-rag-evaluation-frameworks",
+      "scope": "external",
+      "surface": "GitHub repositories and current evaluation-framework documentation",
+      "query": "LLM evaluation framework RAG evaluation deterministic tests model judge DeepEval Ragas Inspect AI",
+      "target_classes": ["framework", "library"],
+      "outcome": "candidates_found",
+      "receipts": [
+        {
+          "receipt_id": "external-deepeval",
+          "kind": "repository",
+          "locator": "confident-ai/deepeval",
+          "note": "Open-source LLM evaluation framework with custom metrics, RAG metrics, schema checks, and CI integration."
+        },
+        {
+          "receipt_id": "external-ragas",
+          "kind": "repository",
+          "locator": "vibrantlabsai/ragas",
+          "note": "Open-source evaluation library focused on systematic LLM/RAG evaluation loops, datasets, and custom metrics."
+        },
+        {
+          "receipt_id": "external-inspect-ai",
+          "kind": "repository",
+          "locator": "UKGovernmentBEIS/inspect_ai",
+          "note": "Open evaluation framework from the UK AI Security Institute with built-in scoring, model-graded evaluation, tool use, and multi-turn evaluation facilities."
+        }
+      ],
+      "rationale": null
+    },
+    {
+      "search_id": "external-reusable-data-benchmarks-question-content",
+      "scope": "external",
+      "surface": "Hugging Face dataset catalog and GitHub educational-content discovery",
+      "query": "RAG benchmark retrieval dataset RAGBench BEIR HotpotQA system design interview question bank reusable technical interview content",
+      "target_classes": ["dataset", "benchmark", "question_bank", "content_asset"],
+      "outcome": "candidates_found",
+      "receipts": [
+        {
+          "receipt_id": "external-ragbench",
+          "kind": "catalog",
+          "locator": "https://huggingface.co/datasets/galileo-ai/ragbench",
+          "note": "RAGBench dataset catalog entry: roughly 95k examples across multiple RAG subsets with response/support/relevance/utilization/completeness-style fields; catalog currently reports CC BY 4.0."
+        },
+        {
+          "receipt_id": "external-beir-hotpotqa",
+          "kind": "catalog",
+          "locator": "https://huggingface.co/datasets/BeIR/hotpotqa",
+          "note": "BEIR HotpotQA retrieval dataset with corpus/query structure for multi-hop retrieval; catalog currently reports CC BY-SA 4.0."
+        },
+        {
+          "receipt_id": "external-system-design-primer",
+          "kind": "repository",
+          "locator": "donnemartin/system-design-primer",
+          "note": "Large system-design interview study/question resource; repository license file states CC BY 4.0."
+        }
+      ],
+      "rationale": null
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "study-os",
+      "name": "Study OS learner-evidence system",
+      "class": "internal_system",
+      "origin": "internal",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "Pukujan/Study-os",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "compose",
+      "evidence_receipts": ["internal-study-os"],
+      "tradeoffs": {
+        "fitness": "Strong fit for learning episodes, assistance provenance, observed/self-reported/derived evidence separation, transfer, retention, and longitudinal capability state; intentionally does not own a mobile game runtime or broad curriculum.",
+        "maintenance": "Active owner-maintained repository with explicit project boundaries, machine-readable state, schemas, tests, and CI.",
+        "license": "Repository is owner-controlled; exact redistribution terms should be checked if Interview OS is ever published beyond personal use.",
+        "security": "Reusing its evidence boundary avoids creating a second learner-state authority; raw/private learning evidence should remain subject to Study OS privacy rules.",
+        "extensibility": "Designed around versioned learning/evidence contracts and domain representations, making an adapter preferable to duplication.",
+        "integration_cost": "Moderate adapter/contract work but materially lower conceptual cost than rebuilding transfer, retention, assistance, and evidence semantics.",
+        "performance": "Not expected to sit on the mobile rendering hot path; can receive durable attempt/evidence events asynchronously from gameplay actions where appropriate.",
+        "material_reasons": [
+          "This is a real internal capability already aligned with the learning thesis.",
+          "Interview OS should own game progression while Study OS remains the preferred authority for learning evidence and durable capability claims."
+        ]
+      }
+    },
+    {
+      "candidate_id": "eval-lab",
+      "name": "Eval Lab reliability walking skeleton",
+      "class": "internal_system",
+      "origin": "internal",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "Pukujan/Eval-lab",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["internal-eval-lab"],
+      "tradeoffs": {
+        "fitness": "Highly relevant precedent for deterministic gates, hidden tests, evidence artifacts, and keeping model output out of final verdict paths, but its concrete task is AI coding-patch reliability rather than learner reasoning/gameplay.",
+        "maintenance": "Existing owner project with documented architecture, acceptance tests, threat model, pinned dependencies, and evidence packaging.",
+        "license": "Internal reuse terms remain owner-controlled; dependency licenses would need to be re-evaluated for copied code.",
+        "security": "Its separation of solver access from hidden tests and its fail-closed evidence patterns are useful design precedents.",
+        "extensibility": "Some schemas/gate patterns may be adaptable, but direct runtime composition would import Temporal/LangGraph/eval infrastructure far beyond V0 needs.",
+        "integration_cost": "High for direct runtime adoption; low for selectively reusing patterns after mission/evaluator contracts exist.",
+        "performance": "Its local/worker orchestration is not designed for a low-latency mobile question loop.",
+        "material_reasons": [
+          "Do not duplicate its deterministic-evidence lessons, but do not turn Interview OS into Eval Lab.",
+          "Selective pattern reuse can be reconsidered when evaluator implementation begins."
+        ]
+      }
+    },
+    {
+      "candidate_id": "design-bakery",
+      "name": "Design Bakery visual language and interaction assets",
+      "class": "content_asset",
+      "origin": "internal",
+      "coverage": "partial",
+      "identity": {
+        "kind": "content_asset",
+        "locator": "Pukujan/design-bakery",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reuse",
+      "evidence_receipts": ["internal-design-bakery"],
+      "tradeoffs": {
+        "fitness": "Strong fit for the requested engineering-lab aesthetic: system maps, flow steps, failure/debug language, dark technical surfaces, and the existing Build/Break/Debug/Log/Blueprint motif.",
+        "maintenance": "Active owner-maintained design/product repository.",
+        "license": "Repository package metadata is UNLICENSED, but the project owner controls both repositories; keep reused assets internal unless redistribution terms are intentionally changed.",
+        "security": "Visual/code reuse does not require sharing user learning data with Design Bakery.",
+        "extensibility": "Design references can be translated into mobile-native tokens/components rather than embedding the whole web application.",
+        "integration_cost": "Low for visual-language reuse; moderate if specific web components are ported to React Native.",
+        "performance": "Web animations/components cannot be assumed mobile-safe; port only bounded motifs and validate mobile rendering/accessibility.",
+        "material_reasons": [
+          "The desired aesthetic already exists internally and should not be redesigned from zero.",
+          "Reuse the visual grammar, not the entire web application architecture."
+        ]
+      }
+    },
+    {
+      "candidate_id": "gemini-medical-rn",
+      "name": "Existing owner Expo/React Native application",
+      "class": "application",
+      "origin": "internal",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "Pukujan/gemini-medical-frontend-react-native",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["internal-gemini-rn"],
+      "tradeoffs": {
+        "fitness": "Confirms an owner-maintained Expo Router/React Native stack with haptics, Reanimated, screens, and TypeScript, but the application domain and state model are unrelated to interview learning.",
+        "maintenance": "Archived repository; useful as implementation evidence but not an active product base.",
+        "license": "Owner-controlled internal code; dependency licenses remain independent.",
+        "security": "Direct forking could drag unrelated medical/auth/data assumptions into Interview OS, which is undesirable.",
+        "extensibility": "Individual setup patterns can be consulted while starting a clean application shell.",
+        "integration_cost": "Lower to inspect than to surgically remove domain-specific baggage from the old app.",
+        "performance": "The dependency set demonstrates access to the mobile interaction primitives needed, but not Interview OS performance itself.",
+        "material_reasons": [
+          "Use as a concrete Expo feasibility receipt, not as the product codebase.",
+          "A clean app shell is safer than repurposing an archived medical application."
+        ]
+      }
+    },
+    {
+      "candidate_id": "expo",
+      "name": "Expo / React Native",
+      "class": "framework",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "expo/expo",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "configure",
+      "evidence_receipts": ["external-expo"],
+      "tradeoffs": {
+        "fitness": "Directly satisfies the one-codebase Android/iOS requirement and aligns with the owner's existing TypeScript/React Native experience and reusable Design Bakery React mental model.",
+        "maintenance": "Large active open-source project with current documentation, SDK releases, EAS build tooling, and a broad React Native ecosystem.",
+        "license": "Open-source Expo repository; exact package-level licenses remain subject to dependency review at implementation time.",
+        "security": "Supports keeping model credentials and hidden evaluation server-side; client secrets still require normal mobile threat modeling.",
+        "extensibility": "Expo Router, haptics, Reanimated-compatible React Native ecosystem, native modules, and EAS provide a practical path from simple quiz UI to richer interactions.",
+        "integration_cost": "Low relative to Flutter/native because the owner already has Expo/React Native code and TypeScript/React design assets.",
+        "performance": "Likely adequate for card/diagram/progression interactions; a representative visual spike is still required before committing to unusually animation-heavy scenes.",
+        "material_reasons": [
+          "Strong reuse of existing owner skills/code patterns and one-codebase requirement.",
+          "Framework reuse does not eliminate the need for a bespoke mission domain model."
+        ]
+      }
+    },
+    {
+      "candidate_id": "flutter",
+      "name": "Flutter",
+      "class": "framework",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "flutter/flutter",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-flutter"],
+      "tradeoffs": {
+        "fitness": "Technically strong one-codebase Android/iOS option with rich custom rendering and animation capabilities.",
+        "maintenance": "Large established framework with active releases and official multi-platform support.",
+        "license": "Open-source framework; exact package/plugin licenses would still require implementation-time review.",
+        "security": "Can support the same server-side secret/hidden-evaluation boundary as other native clients.",
+        "extensibility": "Strong widget/rendering system, but would create a separate Dart UI stack with less direct reuse of existing React/TypeScript code and design components.",
+        "integration_cost": "Higher for this owner/project because it introduces Dart and prevents direct reuse of existing Expo/React Native patterns.",
+        "performance": "Potentially excellent for custom graphics; no current evidence that Interview OS requires performance beyond the React Native/Expo envelope.",
+        "material_reasons": [
+          "A real serious mobile alternative, not an abstract category.",
+          "Rejected for current V0 primarily on integration/reuse cost, not because Flutter is technically incapable."
+        ]
+      }
+    },
+    {
+      "candidate_id": "h5p-branching-scenario",
+      "name": "H5P Branching Scenario",
+      "class": "framework",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "h5p/h5p-branching-scenario",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-h5p"],
+      "tradeoffs": {
+        "fitness": "Mature branching-content and feedback semantics are relevant to scenario missions, but H5P does not provide the required mobile-native game progression, Study OS evidence boundary, typed-reasoning judge, or hidden-evaluation separation.",
+        "maintenance": "Established H5P ecosystem and public repository history.",
+        "license": "Repository-level terms must be checked before copying code/content; no license assumption is used to justify rejection.",
+        "security": "Embedding a general content runtime would not by itself protect hidden evaluation material or model credentials.",
+        "extensibility": "Useful content-model precedent, but adopting the H5P runtime would introduce a second authoring/runtime architecture for a very small V0.",
+        "integration_cost": "Material because a mobile shell, Study OS adapter, reasoning evaluator, and game progression would still be bespoke around it.",
+        "performance": "Browser/content-runtime performance is not the decisive issue; architecture fit is.",
+        "material_reasons": [
+          "Branching semantics are worth learning from.",
+          "The runtime does not remove enough bespoke Interview OS work to justify adopting its ecosystem in V0."
+        ]
+      }
+    },
+    {
+      "candidate_id": "oppia",
+      "name": "Oppia",
+      "class": "application",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "oppia/oppia",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-oppia"],
+      "tradeoffs": {
+        "fitness": "Excellent precedent for stateful explorations, learn-by-doing interactions, rules, targeted feedback, and authoring; substantially broader than the personal technical-interview mobile game.",
+        "maintenance": "Large established open-source learning platform with active contributor ecosystem.",
+        "license": "Repository-level license should be checked before code reuse; architecture mismatch is sufficient for current rejection without relying on licensing.",
+        "security": "Its platform/user/content model is much broader than the personal V0 trust boundary.",
+        "extensibility": "Extensible inside Oppia's platform, but Interview OS would become a customization of a large web learning system rather than a bounded mobile app.",
+        "integration_cost": "High because adopting the Python/Angular platform would import many services and concepts unrelated to the V0 mission loop.",
+        "performance": "No evidence performance is a blocker; scope and topology mismatch dominate.",
+        "material_reasons": [
+          "Use Oppia as interaction/authoring precedent.",
+          "Do not adopt a broad learning platform to avoid building a small domain-specific mission layer."
+        ]
+      }
+    },
+    {
+      "candidate_id": "grillkit",
+      "name": "GrillKit",
+      "class": "application",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "GrillKit/grillkit",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-grillkit"],
+      "tradeoffs": {
+        "fitness": "Closest direct interview comparator found: curated technical question banks, structured sessions, scoring, follow-ups, coding tasks, public/hidden tests, and optional voice. It is still an interview trainer rather than the intended mobile progression/learning-evidence game.",
+        "maintenance": "Current public self-hosted project with documented feature set and active repository surface.",
+        "license": "Repository documentation currently states Apache 2.0; verify exact revision before copying any material.",
+        "security": "Hidden coding tests and self-hosted architecture are useful precedents, but its server/session model does not automatically satisfy Interview OS learning-evidence/transfer boundaries.",
+        "extensibility": "Question-bank and interview-flow concepts may be reusable; direct runtime reuse would couple the product to a differently scoped application.",
+        "integration_cost": "Moderate to high because mobile game progression, Study OS integration, glossary/tooltips, and Design Bakery visuals would remain additional systems.",
+        "performance": "No identified performance blocker; product/learning-model mismatch is the deciding factor.",
+        "material_reasons": [
+          "This concrete comparator closes the original v0.1 'generic quiz framework' research gap.",
+          "Potential question/flow inspiration should be treated as sourced content, not as proof the whole runtime should be adopted."
+        ]
+      }
+    },
+    {
+      "candidate_id": "loadout",
+      "name": "Loadout",
+      "class": "application",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "VC444/loadout",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-loadout"],
+      "tradeoffs": {
+        "fitness": "Strong precedent for system-design interview stages, AI interviewer behavior, timed sessions, and live architecture diagramming; current project scope is much narrower and web/voice oriented.",
+        "maintenance": "Small public repository with a concrete runnable implementation; current README notes only one interview question, so content maturity is limited.",
+        "license": "Repository README states MIT; verify exact revision before reuse.",
+        "security": "Uses OpenAI Realtime API and a web application boundary; it does not establish Interview OS hidden learning-evaluation separation.",
+        "extensibility": "Diagramming and staged interview ideas may be reused conceptually, but the app is not a general mission engine.",
+        "integration_cost": "Material because direct reuse imports Next.js/voice/whiteboard assumptions and still leaves mobile learning progression/evidence bespoke.",
+        "performance": "No material performance issue identified at repository-review level.",
+        "material_reasons": [
+          "Useful future system-design interaction precedent.",
+          "Insufficient breadth and different modality to replace the V0 mobile learning runtime."
+        ]
+      }
+    },
+    {
+      "candidate_id": "deepeval",
+      "name": "DeepEval",
+      "class": "library",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "confident-ai/deepeval",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-deepeval"],
+      "tradeoffs": {
+        "fitness": "Strong LLM-system evaluation library with custom/model-judge metrics and CI support, but Interview OS needs a learner-reasoning rubric interpreter plus deterministic game scoring rather than a general LLM application-quality framework.",
+        "maintenance": "Large active open-source project with substantial ecosystem adoption.",
+        "license": "Repository documentation currently states Apache 2.0.",
+        "security": "Any cloud logging/integration would require explicit opt-in; the personal V0 can keep learner answers and grading local/server-controlled instead.",
+        "extensibility": "Could later help test the evaluator itself or benchmark model-judge variants.",
+        "integration_cost": "Low to moderate technically, but adopting it before the mission/rubric contract exists would couple the domain model to a general eval abstraction prematurely.",
+        "performance": "LLM-judge metrics add model-call cost/latency; deterministic scoring should remain separate regardless of framework.",
+        "material_reasons": [
+          "Do not build generic LLM-eval plumbing blindly, but also do not make it the learner-scoring authority.",
+          "Reconsider as a test/benchmark dependency after the rubric/evaluator interface is frozen."
+        ]
+      }
+    },
+    {
+      "candidate_id": "ragas",
+      "name": "Ragas",
+      "class": "library",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "vibrantlabsai/ragas",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-ragas"],
+      "tradeoffs": {
+        "fitness": "Strong fit for evaluating RAG application outputs and running systematic experiments; does not directly grade whether a learner articulated the expected interview reasoning concepts.",
+        "maintenance": "Active open-source RAG/LLM evaluation project with current docs and dataset/metric workflows.",
+        "license": "Exact current repository/package license should be checked before implementation; no licensing assumption is used for rejection.",
+        "security": "Model/provider configuration and evaluation data handling would need the same privacy boundary as any LLM judge.",
+        "extensibility": "Potentially valuable inside the dataset-backed run-bench/evaluation layer later.",
+        "integration_cost": "Premature for the first authored question/reasoning loop; more appropriate when actual RAG executions are introduced.",
+        "performance": "Some metrics may require model calls and are unsuitable as the sole low-latency scoring path.",
+        "material_reasons": [
+          "Relevant reusable RAG evaluation capability exists.",
+          "Defer runtime adoption until the first dataset-backed execution mission requires metrics it already implements."
+        ]
+      }
+    },
+    {
+      "candidate_id": "inspect-ai",
+      "name": "Inspect AI",
+      "class": "framework",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "repository",
+        "locator": "UKGovernmentBEIS/inspect_ai",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reject",
+      "evidence_receipts": ["external-inspect-ai"],
+      "tradeoffs": {
+        "fitness": "Mature model-evaluation framework with scoring, tool use, multi-turn tasks, and model-graded evaluation; oriented toward evaluating AI systems/models rather than tracking a human learner through game missions.",
+        "maintenance": "Active framework maintained by the UK AI Security Institute with extensive evaluation ecosystem.",
+        "license": "Exact repository/package license should be checked before implementation; architecture fit, not licensing, drives current disposition.",
+        "security": "Useful precedent for isolated eval tasks and controlled scoring, but learner evidence and hidden transfer semantics remain Interview OS/Study OS concerns.",
+        "extensibility": "Could be useful for offline evaluator calibration or future model benchmarking.",
+        "integration_cost": "High relative to the small V0 if adopted as the runtime scoring framework.",
+        "performance": "Designed for evaluation runs rather than a mobile interaction hot path.",
+        "material_reasons": [
+          "Do not reimplement generic model-evaluation capabilities if future calibration needs them.",
+          "Keep V0 learner scoring domain-specific and bounded."
+        ]
+      }
+    },
+    {
+      "candidate_id": "ragbench",
+      "name": "RAGBench",
+      "class": "dataset",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "dataset",
+        "locator": "https://huggingface.co/datasets/galileo-ai/ragbench",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reuse",
+      "evidence_receipts": ["external-ragbench"],
+      "tradeoffs": {
+        "fitness": "Excellent fit for Applied AI/RAG missions because it includes questions, retrieved documents, responses, support/relevance/utilization/completeness-style annotations, multiple domains, and train/validation/test splits.",
+        "maintenance": "Public Hugging Face dataset with current catalog activity and multiple subsets.",
+        "license": "Hugging Face currently reports CC BY 4.0; exact files/revision and upstream subset provenance must be pinned before use.",
+        "security": "Public data is suitable for teaching/practice fixtures but cannot become genuinely unseen evidence after exposure to the learner or evaluator agent.",
+        "extensibility": "Can seed diagnosis, retrieval, grounding, and evaluation missions without inventing a proprietary corpus.",
+        "integration_cost": "Moderate transformation/provenance work; V0 should curate a small pinned fixture rather than ship the full dataset.",
+        "performance": "Full dataset size is unnecessary for the client; bounded server-side/local fixtures can keep missions fast.",
+        "material_reasons": [
+          "Strong evidence against creating an Applied AI/RAG dataset from zero.",
+          "Benchmark integrity still owns exact revision, transformation, contamination, and result claims."
+        ]
+      }
+    },
+    {
+      "candidate_id": "beir-hotpotqa",
+      "name": "BEIR HotpotQA retrieval dataset",
+      "class": "dataset",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "dataset",
+        "locator": "https://huggingface.co/datasets/BeIR/hotpotqa",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reuse",
+      "evidence_receipts": ["external-beir-hotpotqa"],
+      "tradeoffs": {
+        "fitness": "Strong retrieval-specific asset with corpus/query relevance structure and multi-hop questions; better suited to retrieval/reranking experiments than to full interview reasoning by itself.",
+        "maintenance": "Part of the established BEIR benchmark ecosystem and available through Hugging Face.",
+        "license": "Hugging Face currently reports CC BY-SA 4.0 for this packaging; exact upstream/revision obligations must be verified before fixture creation.",
+        "security": "Public benchmark material is development-visible and must not be mislabeled as unseen confirmatory evidence after exposure.",
+        "extensibility": "Useful for later retrieval, reranking, query decomposition, and metric-driven missions.",
+        "integration_cost": "Moderate because the source corpus is large; V0 should use a curated pinned subset if selected for execution.",
+        "performance": "The full multi-million-document corpus is unsuitable for a mobile bundle; server-side or curated fixture execution is required.",
+        "material_reasons": [
+          "Provides objective retrieval structure that can anchor real consequences.",
+          "RAGBench is probably the simpler first Applied AI fixture; BEIR remains a strong follow-on retrieval asset."
+        ]
+      }
+    },
+    {
+      "candidate_id": "system-design-primer",
+      "name": "System Design Primer",
+      "class": "question_bank",
+      "origin": "external",
+      "coverage": "partial",
+      "identity": {
+        "kind": "question_bank",
+        "locator": "donnemartin/system-design-primer",
+        "version": null
+      },
+      "serious": true,
+      "disposition": "reuse",
+      "evidence_receipts": ["external-system-design-primer"],
+      "tradeoffs": {
+        "fitness": "Large reusable system-design interview corpus covering architecture concepts, questions, discussions, and diagrams; relevant to the future system-design track rather than the first RAG vertical slice.",
+        "maintenance": "Large established public repository with long-term community use.",
+        "license": "Repository license states CC BY 4.0, so attribution should remain attached to transformed private study material and any future redistribution.",
+        "security": "Public content must be treated as teaching/practice material rather than hidden evaluation once exposed.",
+        "extensibility": "Can seed original transformed scenarios and concept coverage without copying the product/runtime structure.",
+        "integration_cost": "Low to moderate normalization, provenance, and question-transformation work.",
+        "performance": "Content asset only; no runtime performance concern.",
+        "material_reasons": [
+          "Future system-design content should not start from an empty corpus.",
+          "Use as curriculum/source material while authoring distinct game missions and transfer variants."
+        ]
+      }
+    }
+  ],
+  "probes": [
+    {
+      "candidate_id": "expo",
+      "status": "run",
+      "evidence": [
+        "https://github.com/Pukujan/gemini-medical-frontend-react-native/blob/main/package.json"
+      ],
+      "rationale": "An existing owner project demonstrates a concrete Expo 54 / React Native 0.81.5 / Expo Router / Haptics / Reanimated stack and Android/iOS scripts. This is a feasibility probe for the base mobile stack, not evidence that Interview OS's final animation language is already proven."
+    },
+    {
+      "candidate_id": "flutter",
+      "status": "not_run",
+      "evidence": [],
+      "rationale": "A Flutter visual spike is not proportionate before Expo fails the representative Interview OS interaction spike: both meet the single-codebase requirement, while Expo has materially lower integration cost because existing owner React Native code and React/TypeScript design assets are available."
+    },
+    {
+      "candidate_id": "h5p-branching-scenario",
+      "status": "not_run",
+      "evidence": [],
+      "rationale": "Repository/product inspection already establishes that H5P supplies a branching content ecosystem, not the complete mobile learner-evidence/hidden-evaluation/game boundary. Embedding it before the small mission schema exists would test an architecture the current V0 does not otherwise need."
+    },
+    {
+      "candidate_id": "grillkit",
+      "status": "not_run",
+      "evidence": [],
+      "rationale": "GrillKit is a valuable direct comparator, but direct runtime adoption would still require replacing the intended mobile client and Study OS boundary. Its content/flow ideas can be researched without first integrating the whole application."
+    },
+    {
+      "candidate_id": "deepeval",
+      "status": "not_run",
+      "evidence": [],
+      "rationale": "The relevant uncertainty is whether Interview OS's eventual evaluator needs a general LLM-evaluation dependency. That cannot be tested meaningfully until the learner-reasoning rubric/output contract exists; adopting DeepEval now would be premature coupling rather than a cheap discriminating probe."
+    }
+  ],
+  "decision": {
+    "disposition": "build_new",
+    "selected_candidate_ids": ["study-os", "design-bakery", "expo", "ragbench", "system-design-primer"],
+    "build_new_unmet_requirements": [
+      "No searched candidate provides the bounded mobile technical-interview mission runtime together with typed learner reasoning, progressive hint/tool-tip provenance, hidden-evaluation separation, Study OS-compatible longitudinal evidence, and the requested game-style visual progression without importing a substantially broader or differently scoped application architecture.",
+      "The closest interview application candidates focus on interview-session simulation, Q&A, coding tests, voice, or diagramming rather than the combined learning loop of assistance fading, changed-surface transfer, game progression, and strict mixed evidence scoring.",
+      "The closest interactive-learning platforms provide branching lessons and feedback but are broad web/content platforms and do not remove the need for the domain-specific interview mission/evaluator/evidence boundary."
+    ],
+    "rationale": "Build only the narrow Interview OS game/mission layer that remains uncovered after discovery. Compose Study OS for longitudinal learning evidence, configure Expo/React Native for the mobile shell, reuse Design Bakery's visual language, and adapt reusable public data/content such as RAGBench and System Design Primer with provenance instead of inventing those assets from zero. Treat Eval Lab and external evaluation frameworks as implementation precedents or later dependencies rather than making them the game runtime. This is a draft technical disposition and is not yet the reviewed PAM gate decision.",
+    "residual_uncertainty": [
+      "A representative Interview OS visual/interaction spike still needs to confirm that the desired Design Bakery-style graphics, gestures, haptics, and animated system diagrams are comfortable in the selected Expo stack on both iOS- and Android-sized targets.",
+      "The exact first RAGBench subset, immutable revision, transformation, and public/practice-vs-hidden role still require benchmark-integrity review.",
+      "The exact Study OS application operation(s) and payload mapping for Interview OS evidence still require contract-level inspection before integration.",
+      "DeepEval, Ragas, Inspect AI, or internal Eval Lab components may become useful for evaluator calibration or later run-bench work after the learner-reasoning rubric contract exists."
+    ],
+    "reconsideration_triggers": [
+      "The Expo interaction spike reveals a blocking rendering, accessibility, or animation constraint that Flutter or another client stack materially solves at acceptable integration cost.",
+      "A maintained mobile-first technical interview learning framework is found that covers the mission/evidence/hidden-eval boundary with lower integration cost.",
+      "Study OS contracts prove incompatible with the evidence events Interview OS needs, requiring a narrower adapter or reconsidered ownership boundary.",
+      "RAGBench or other selected reusable assets fail exact licensing, provenance, contamination, pedagogical-fit, or immutable-revision review.",
+      "A general LLM-evaluation framework demonstrably eliminates substantial custom evaluator code without taking authority over deterministic scoring."
+    ],
+    "human_review": {
+      "status": "pending",
+      "evidence": null
+    }
+  }
+}

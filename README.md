@@ -1,73 +1,107 @@
 # Interview OS Game
 
-Interview OS Game is a personal, non-commercial mobile learning game for technical interview preparation.
+Interview OS Game is a personal, non-commercial mobile learning-game concept for technical interview preparation.
 
-The first product slice targets **mid-level Applied AI engineering**: LLM applications, RAG, evaluation, production trade-offs, and AI system-design reasoning. DSA, ML fundamentals, and general system design remain planned tracks rather than V0 implementation scope.
+## Current status: PAM v0.2 reprojectization
 
-## Product loop
+The original Interview OS preflight used `projectization.build-vs-reuse@0.1.0`. That adoption exposed the methodology defect recorded in `Pukujan/project-assurance-modules` issue #10: a plausible prose candidate register could close the gate without sufficiently traceable research into concrete product/runtime alternatives and reusable datasets/content.
+
+The original preflight is therefore preserved as regression history but is **not current project authority**.
+
+Current methodology pin:
+
+`Pukujan/project-assurance-modules@03fc55ae4036a9704cdb929fb3ae6dc520ae2183`
+
+Current projectization work:
+
+- issue #8;
+- branch `pam-v0.2-reprojectization`;
+- `assurance/RESEARCH_HANDOFF.md`;
+- `assurance/REUSE_ASSESSMENT.json`;
+- `assurance/SCOPE_BOUNDARY.md`;
+- `PROJECT_ASSURANCE.json`;
+- `HANDOFF_STATE.json`.
+
+Old issues #1 through #6 and the old `docs/*` preflight artifacts are superseded unless explicitly regenerated and referenced by the current PAM v0.2 manifest.
+
+## Research direction
+
+The product idea remains a fun, mobile-first interview learning experience rather than a plain four-choice quiz.
+
+The working interaction thesis is:
 
 ```text
-scenario/question
+technical mission
+  -> inspect jargon if needed
   -> make a decision
   -> explain why
-  -> optionally use terminology help or progressive hints
-  -> deterministic + rubric-constrained evaluation
-  -> see system consequence / feedback
-  -> gain game progression
-  -> preserve learning evidence
-  -> encounter a changed-surface follow-up
+  -> optionally request progressive hints
+  -> separate deterministic / empirical / reasoning feedback
+  -> see a visual consequence
+  -> earn game progression
+  -> preserve learning evidence separately
+  -> later face changed-surface transfer
 ```
 
-The goal is not a four-choice trivia clone. Missions should feel like small engineering incidents, design decisions, debugging situations, and eventually bounded executable labs.
+The first research context remains mid-level Applied AI / RAG, with DSA, ML fundamentals, and general system design as possible later tracks rather than assumed first-build scope.
 
-## V0 boundary
+## What the new reuse research found
 
-V0 intentionally proves the small learning/game loop first:
+The PAM v0.2 assessment now uses concrete internal/external alternatives instead of abstract categories.
 
-- Applied AI/RAG vertical slice;
-- approximately 15 curated missions;
-- tappable technical terminology;
-- progressive hints with assistance provenance;
-- short typed `why?` reasoning;
-- deterministic answer/rubric structure;
-- constrained LLM reasoning interpretation;
-- simple game progression separated from mastery;
-- one bounded dataset-backed RAG mission;
-- Study OS-compatible learning-evidence output;
-- Expo/React Native cross-platform UI spike.
+Important internal candidates/assets include:
 
-The general run bench, arbitrary code execution, broad DSA/ML/SYS curriculum, public-user infrastructure, and distributed-system simulation are deferred.
+- `Pukujan/Study-os` for longitudinal learner evidence;
+- `Pukujan/Eval-lab` as deterministic/hidden-evaluation precedent;
+- `Pukujan/design-bakery` for the requested engineering-system visual language;
+- an existing owner Expo/React Native application as mobile-stack feasibility evidence.
 
-## Projectization
+Concrete external alternatives/assets considered include:
 
-This repository is being projectized with `Pukujan/project-assurance-modules`, pinned in `PROJECT_ASSURANCE.json`.
+- H5P Branching Scenario;
+- Oppia;
+- GrillKit;
+- Loadout;
+- Expo / React Native;
+- Flutter;
+- DeepEval;
+- Ragas;
+- Inspect AI;
+- RAGBench;
+- BEIR HotpotQA;
+- System Design Primer.
 
-Start with:
+The current machine-readable assessment proposes composing/reusing those systems and assets where they fit and building only the narrow uncovered game/mission layer. That disposition is still **draft** until project-owner review closes `REUSE_008`.
 
-- `docs/PAM_PREFLIGHT.md` — routed methodology and gap report;
-- `docs/PDD.md` — product definition;
-- `docs/SCOPE_BOUNDARY.md` — current claims, non-goals, and admission rule;
-- `docs/BUILD_VS_REUSE.md` — reuse/build decisions;
-- `docs/SDD.md` — system/ownership boundary;
-- `docs/INVARIANTS.md` — properties that must remain true;
-- `docs/FAILURE_REGISTER.md` — material failure modes;
-- `docs/BENCHMARK_POLICY.md` — dataset/hidden-evaluation integrity;
-- `docs/DECISIONS.md` — consequential decision lineage;
-- `HANDOFF_STATE.json` — current resumable project state.
+## Current scope draft
 
-PAM is project methodology, not a runtime dependency.
+The fresh scope draft aims to validate one small end-to-end mobile learning loop before broad infrastructure:
 
-## Relationship to Study OS
+- touch-first mobile shell;
+- a small Applied AI/RAG mission set;
+- jargon tooltips;
+- progressive hints;
+- selected typed `why?` reasoning;
+- deterministic rules plus constrained reasoning interpretation;
+- simple visual/game progression separated from mastery;
+- Study OS evidence composition if its contracts fit;
+- at most one small dataset-backed practice fixture after benchmark-integrity review.
 
-`Pukujan/Study-os` remains the preferred longitudinal learner-evidence/capability authority. Interview OS owns gameplay, missions, presentation, product-specific evaluation integration, and game progression. It should emit compatible evidence rather than create a second canonical mastery engine.
+A general run bench, arbitrary code execution, distributed-system simulation, broad multi-track curriculum, voice mock interview, social infrastructure, and commercial/public-user infrastructure are outside the current horizon.
 
-## Current execution order
+See `assurance/SCOPE_BOUNDARY.md` for the explicit admission/defer/reject rules.
 
-1. Review/close PAM preflight (#1 / PR #7).
-2. Define versioned mission/content/evidence contracts (#2).
-3. Build the first Applied AI/RAG vertical slice (#3).
-4. Establish the concrete dataset/hidden-eval implementation (#4).
-5. Freeze the Study OS integration adapter (#5).
-6. Develop the visual/game language against the working mission loop (#6).
+## Projectization gate
 
-Do not broaden implementation merely because a deferred mechanism is technically interesting.
+Do **not** start product/runtime implementation merely because the concept is clear.
+
+Current order:
+
+1. traceable internal/external reuse and asset discovery;
+2. fresh scope boundary;
+3. PAM routing/gap analysis;
+4. project-owner review of the material build/reuse + scope disposition;
+5. freeze the reviewed manifest;
+6. only then regenerate product definition, architecture, invariants, benchmark plan, and implementation issues.
+
+PAM is project methodology, not a game/runtime dependency.

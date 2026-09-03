@@ -3,11 +3,11 @@
   "project": {
     "name": "Interview OS Game",
     "repository": "Pukujan/interview-os-game",
-    "phase": "projectization-preflight"
+    "phase": "projectization-restart-discovery"
   },
   "methodology": {
     "repository": "Pukujan/project-assurance-modules",
-    "revision": "0e62c3e7cbb90e9242103238829bbf0cc2f94917"
+    "revision": "03fc55ae4036a9704cdb929fb3ae6dc520ae2183"
   },
   "project_facts": {
     "software": true,
@@ -24,7 +24,7 @@
     "primary_track": "mid-level-applied-ai"
   },
   "profiles": [
-    {"profile_id": "projectization.software", "version": "0.1.0"},
+    {"profile_id": "projectization.software", "version": "0.2.0"},
     {"profile_id": "benchmark.empirical-work", "version": "0.1.0"},
     {"profile_id": "provenance.material-decisions", "version": "0.1.0"},
     {"profile_id": "continuity.material-work", "version": "0.1.0"}
@@ -32,48 +32,50 @@
   "modules": [
     {
       "module_id": "projectization.build-vs-reuse",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "disposition": "required",
-      "rationale": "The project has plausible reusable application, learner-evidence, and methodology components.",
+      "rationale": "Interview OS is a nontrivial software capability with plausible internal systems, external learning/interview applications, mobile frameworks, evaluation libraries, datasets, benchmarks, and question/content assets that must be researched before bespoke implementation is authorized.",
       "requirements": [
-        {"requirement_id": "REUSE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Capability, constraints, non-goals, and comparison criteria."}], "rationale": null},
-        {"requirement_id": "REUSE_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Candidate register covers Study OS, PAM, Expo/React Native, Flutter, native, PWA, and quiz engines."}], "rationale": null},
-        {"requirement_id": "REUSE_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "Material trade-offs and candidate dispositions are recorded."}], "rationale": null},
-        {"requirement_id": "REUSE_004", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "REUSE_005", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "REUSE_006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BUILD_VS_REUSE.md", "note": "The narrow mission engine has concrete requirements not met by generic quiz abstractions."}], "rationale": null}
+        {"requirement_id": "REUSE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "assurance/RESEARCH_HANDOFF.md", "note": "Defines the capability, must-have constraints, non-goals, research inputs, and decision criteria without treating the old implementation plan as authoritative."}], "rationale": null},
+        {"requirement_id": "REUSE_002", "state": "satisfied", "evidence": [{"kind": "artifact", "locator": "assurance/REUSE_ASSESSMENT.json", "note": "Machine-readable assessment records executed internal and external discovery with concrete receipts."}], "rationale": null},
+        {"requirement_id": "REUSE_003", "state": "satisfied", "evidence": [{"kind": "artifact", "locator": "assurance/REUSE_ASSESSMENT.json", "note": "Records concrete serious candidates including Study OS, Eval Lab, Design Bakery, Expo, Flutter, H5P, Oppia, GrillKit, Loadout, DeepEval, Ragas, Inspect AI, RAGBench, BEIR HotpotQA, and System Design Primer."}], "rationale": null},
+        {"requirement_id": "REUSE_004", "state": "satisfied", "evidence": [{"kind": "artifact", "locator": "assurance/REUSE_ASSESSMENT.json", "note": "Required dataset, benchmark, question-bank, and content-asset classes are included in traceable search coverage."}], "rationale": null},
+        {"requirement_id": "REUSE_005", "state": "satisfied", "evidence": [{"kind": "artifact", "locator": "assurance/REUSE_ASSESSMENT.json", "note": "Serious candidates record explicit fitness, maintenance, license, security, extensibility, integration-cost, performance, and disposition trade-offs."}], "rationale": null},
+        {"requirement_id": "REUSE_006", "state": "satisfied", "evidence": [{"kind": "artifact", "locator": "assurance/REUSE_ASSESSMENT.json", "note": "Assessment records an existing Expo feasibility probe and proportionality rationales for other candidate probes not yet justified."}], "rationale": null},
+        {"requirement_id": "REUSE_007", "state": "satisfied", "evidence": [{"kind": "artifact", "locator": "assurance/REUSE_ASSESSMENT.json", "note": "Draft build-new disposition is limited to the uncovered mission/game layer and names concrete unmet requirements while preserving Study OS, Expo, Design Bakery, and reusable content/data composition."}], "rationale": null},
+        {"requirement_id": "REUSE_008", "state": "pending", "evidence": [], "rationale": "The v0.2 assessment intentionally remains draft with human_review=pending. The final implementation disposition has not yet crossed the reviewed projectization gate."}
       ]
     },
     {
       "module_id": "projectization.scope-boundary",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "The idea has high horizontal scope risk across content, simulation, datasets, mobile UI, and evaluation.",
+      "rationale": "The project has high horizontal scope risk, but the v0.1 scope document is superseded and must be re-derived after the corrected reuse disposition is reviewed.",
       "requirements": [
-        {"requirement_id": "SCOPE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "V0 outcome and claims are bounded."}], "rationale": null},
-        {"requirement_id": "SCOPE_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "V0 non-goals are explicit."}], "rationale": null},
-        {"requirement_id": "SCOPE_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Deferred/rejected mechanisms and triggers are recorded."}], "rationale": null},
-        {"requirement_id": "SCOPE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Scope-admission rule is defined."}], "rationale": null},
-        {"requirement_id": "SCOPE_005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SCOPE_BOUNDARY.md", "note": "Repository ownership and must-not-own boundaries are defined."}], "rationale": null}
+        {"requirement_id": "SCOPE_001", "state": "pending", "evidence": [], "rationale": "Superseded v0.1 scope cannot close the v0.2 restart."},
+        {"requirement_id": "SCOPE_002", "state": "pending", "evidence": [], "rationale": "Non-goals will be frozen from the reviewed reuse decision."},
+        {"requirement_id": "SCOPE_003", "state": "pending", "evidence": [], "rationale": "Deferred and rejected mechanisms must be regenerated from the corrected candidate research."},
+        {"requirement_id": "SCOPE_004", "state": "pending", "evidence": [], "rationale": "Scope-admission rule will be re-established after review."},
+        {"requirement_id": "SCOPE_005", "state": "pending", "evidence": [], "rationale": "Repository/component ownership must be re-derived from the reviewed compose/build boundary."}
       ]
     },
     {
       "module_id": "planning.foundation",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "Nontrivial implementation needs product, architecture, invariants, and failures made durable first.",
+      "rationale": "Product definition, system design, invariants, and failures must be regenerated after the v0.2 build-vs-reuse and scope decisions; old v0.1 planning files are historical only.",
       "requirements": [
-        {"requirement_id": "PLAN_FOUNDATION_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/PDD.md", "note": "Product outcome, user, success criteria, and kill criteria."}], "rationale": null},
-        {"requirement_id": "PLAN_FOUNDATION_002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/SDD.md", "note": "System, interface, state, dependency, and ownership boundaries."}], "rationale": null},
-        {"requirement_id": "PLAN_FOUNDATION_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/INVARIANTS.md", "note": "Material invariants and validation approaches."}], "rationale": null},
-        {"requirement_id": "PLAN_FOUNDATION_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/FAILURE_REGISTER.md", "note": "Failure modes include impact, detection, mitigation, and residual risk."}], "rationale": null}
+        {"requirement_id": "PLAN_FOUNDATION_001", "state": "pending", "evidence": [], "rationale": "PDD must be re-derived."},
+        {"requirement_id": "PLAN_FOUNDATION_002", "state": "pending", "evidence": [], "rationale": "SDD must be re-derived."},
+        {"requirement_id": "PLAN_FOUNDATION_003", "state": "pending", "evidence": [], "rationale": "Invariants must be re-derived."},
+        {"requirement_id": "PLAN_FOUNDATION_004", "state": "pending", "evidence": [], "rationale": "Failure register must be re-derived."}
       ]
     },
     {
       "module_id": "engineering.swe-ci-foundation",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "Interview OS will contain maintained application/backend software.",
+      "rationale": "The eventual application will require normal software quality and CI, but no product runtime is authorized during the current reprojectization gate.",
       "requirements": [
         {"requirement_id": "SWE_CI_001", "state": "pending", "evidence": [], "rationale": null},
         {"requirement_id": "SWE_CI_002", "state": "pending", "evidence": [], "rationale": null},
@@ -86,40 +88,40 @@
       "module_id": "benchmark.integrity",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "V0 uses dataset-backed missions, LLM-derived evaluation, transfer items, and some hidden evaluation.",
+      "rationale": "Dataset-backed and potentially protected transfer evaluation remains part of the research intent, but the old benchmark policy is superseded until the selected assets and scope are reviewed under PAM v0.2.",
       "requirements": [
-        {"requirement_id": "BENCH_INT_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Evaluation claims and applicability limits are narrow."}], "rationale": null},
-        {"requirement_id": "BENCH_INT_002", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "BENCH_INT_003", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Teaching, practice, transfer, and confirmatory boundaries are defined."}], "rationale": null},
-        {"requirement_id": "BENCH_INT_004", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "BENCH_INT_005", "state": "pending", "evidence": [], "rationale": null}
+        {"requirement_id": "BENCH_INT_001", "state": "pending", "evidence": [], "rationale": "Evaluation claims must be re-derived from the selected first mission/asset."},
+        {"requirement_id": "BENCH_INT_002", "state": "pending", "evidence": [], "rationale": "Exact dataset/protocol identity has not been selected."},
+        {"requirement_id": "BENCH_INT_003", "state": "pending", "evidence": [], "rationale": "Practice/transfer/confirmatory boundaries will be re-frozen after first asset selection."},
+        {"requirement_id": "BENCH_INT_004", "state": "pending", "evidence": [], "rationale": "Leakage controls depend on the reviewed client/server/evaluator boundary."},
+        {"requirement_id": "BENCH_INT_005", "state": "pending", "evidence": [], "rationale": "Reproducible result artifacts depend on the first empirical protocol."}
       ]
     },
     {
       "module_id": "provenance.decision-lineage",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "Scope, reuse, evaluator, dataset, and ownership decisions are replay-worthy across sessions.",
+      "rationale": "The v0.2 restart, final reuse disposition, scope boundary, source selection, and architecture decisions are consequential and should remain replayable.",
       "requirements": [
-        {"requirement_id": "PROV_LINEAGE_001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "docs/DECISIONS.md", "note": "Consequential decision classes are admitted while routine task churn remains in GitHub."}], "rationale": null},
+        {"requirement_id": "PROV_LINEAGE_001", "state": "pending", "evidence": [], "rationale": "The old decision log is superseded; fresh decision classes will be recorded after review."},
         {"requirement_id": "PROV_LINEAGE_002", "state": "pending", "evidence": [], "rationale": null},
         {"requirement_id": "PROV_LINEAGE_003", "state": "pending", "evidence": [], "rationale": null},
-        {"requirement_id": "PROV_LINEAGE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Live GitHub state is authoritative and runtime ownership is separate from methodology/lineage."}], "rationale": null},
-        {"requirement_id": "PROV_LINEAGE_005", "state": "not_applicable", "evidence": [], "rationale": "No external provenance runtime ingest or promotion is claimed for V0."}
+        {"requirement_id": "PROV_LINEAGE_004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Live GitHub state remains authoritative and current projectization evidence is separated from superseded historical material."}], "rationale": null},
+        {"requirement_id": "PROV_LINEAGE_005", "state": "not_applicable", "evidence": [], "rationale": "No external provenance runtime ingest/promotion mechanism is required merely to redo projectization."}
       ]
     },
     {
       "module_id": "continuity.structured-handoff",
       "version": "0.1.0",
       "disposition": "required",
-      "rationale": "The project is multi-session and agent-assisted and needs exact resumable state.",
+      "rationale": "The project remains multi-session and agent-assisted; the continuity mechanism itself can remain while its current state is replaced with the v0.2 restart.",
       "requirements": [
-        {"requirement_id": "HANDOFF-001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Material handoff triggers and live-state precedence are defined."}], "rationale": null},
-        {"requirement_id": "HANDOFF-002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Versioned current handoff packet using pam-handoff/0.2.0; its validation is covered by HANDOFF-003."}], "rationale": null},
-        {"requirement_id": "HANDOFF-003", "state": "satisfied", "evidence": [{"kind": "ci_run", "locator": "github-actions:33697121873", "note": "Pinned PAM handoff positive/negative tests plus Interview OS handoff validation passed."}, {"kind": "file", "locator": ".github/workflows/assurance.yml", "note": "Normal assurance lane runs the pinned handoff tests and validators."}], "rationale": null},
-        {"requirement_id": "HANDOFF-004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Resume instructions require live GitHub/CI reconciliation before mutation."}], "rationale": null},
-        {"requirement_id": "HANDOFF-005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Current-state and optional append-only historical-checkpoint policy is defined."}, {"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Current resumable state packet."}], "rationale": null},
-        {"requirement_id": "HANDOFF-006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Hidden/confirmatory material is forbidden in agent-visible handoffs."}, {"kind": "file", "locator": "docs/BENCHMARK_POLICY.md", "note": "Hidden-evaluation boundary is defined."}], "rationale": null}
+        {"requirement_id": "HANDOFF-001", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines material handoff triggers, current-state replacement, and live-state precedence."}], "rationale": null},
+        {"requirement_id": "HANDOFF-002", "state": "satisfied", "evidence": [{"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Current resumable state will point to issue #8, the v0.2 branch, and the new PAM revision."}], "rationale": null},
+        {"requirement_id": "HANDOFF-003", "state": "pending", "evidence": [], "rationale": "New PAM v0.2 manifest/reuse/handoff CI validation has not yet completed on this branch."},
+        {"requirement_id": "HANDOFF-004", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Requires live GitHub/CI reconciliation before mutation after a material handoff."}], "rationale": null},
+        {"requirement_id": "HANDOFF-005", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Defines replaceable current handoff and optional historical checkpoint policy."}, {"kind": "file", "locator": "HANDOFF_STATE.json", "note": "Current resumable state packet."}], "rationale": null},
+        {"requirement_id": "HANDOFF-006", "state": "satisfied", "evidence": [{"kind": "file", "locator": "AGENTS.md", "note": "Forbids hidden/confirmatory answers, labels, seeds, and private evaluator material in agent-visible handoffs."}], "rationale": null}
       ]
     }
   ]
